@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="535.401" Width="946.168">
+        Title="Sun Info" Height="535.401" Width="946.168">
     <Grid>
-        <Button Content="Sunrise Sunset" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Width="918" Height="40"/>
+        <Button x:Name="loadSunInfo" Click="loadSunInfo_Click" Content="Sunrise Sunset" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Width="918" Height="40"/>
+        <TextBlock x:Name="sunriseText" HorizontalAlignment="Left" Margin="10,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="918" Height="44"/>
+        <TextBlock x:Name="sunsetText" HorizontalAlignment="Left" Margin="10,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="918" Height="44"/>
 
     </Grid>
 </Window>

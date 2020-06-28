@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DemoLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,14 @@ namespace WpfClient
         public MainWindow()
         {
             InitializeComponent();
+            ApiHelper.InitializeClient();
+        }
+
+        private async void loadSunInfo_Click(object sender, RoutedEventArgs e)
+        {
+            var sunInfo = await SunProcessor.LoadSunInformation();
+            sunriseText.Text = $"Amanhecer é as: { sunInfo.Sunrise.ToLocalTime().ToShortTimeString() }";
+            sunsetText.Text = $"Anoitecer é as: { sunInfo.Sunset.ToLocalTime().ToShortTimeString() }";
         }
     }
 }
